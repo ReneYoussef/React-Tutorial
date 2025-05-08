@@ -1,5 +1,6 @@
 export default [
     {
+        id: 1,
       img: {
         src: "https://i.pinimg.com/originals/71/1c/b3/711cb33d1fd18000c4ce62d7da9f51c8.jpg",
         alt: "Mount Fuji"
@@ -12,6 +13,7 @@ export default [
         "Mount Fuji is Japan's highest peak, standing at 3,776 meters (12,389 feet). It is an active stratovolcano that last erupted in 1707. The mountain is a symbol of Japan and is often depicted in art and literature. It is a popular destination for hikers and tourists."
     },
     {
+        id: 2,
       img: {
         src: "https://i.pinimg.com/originals/a7/51/cf/a751cf3966967bb4ce7ef26fbc078291.jpg",
         alt: "Eiffel Tower"
@@ -24,6 +26,7 @@ export default [
         "The Eiffel Tower is one of the most recognizable structures in the world, located in Paris. Built in 1889, it stands at 324 meters and attracts millions of tourists every year."
     },
     {
+        id: 3,
       img: {
         src: "https://img.freepik.com/premium-photo/great-wall-china-wallpapper-background_1028292-1251.jpg?w=2000",
         alt: "Great Wall of China"
@@ -36,6 +39,7 @@ export default [
         "The Great Wall of China is a series of fortifications that were built to protect against invasions. It stretches over 13,000 miles and is one of the most iconic landmarks in the world."
     },
     {
+        id: 4,
       img: {
         src: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg",
         alt: "Statue of Liberty"
@@ -48,6 +52,7 @@ export default [
         "The Statue of Liberty is a gift from France to the United States and stands in New York Harbor. It represents freedom and democracy and is visited by millions each year."
     },
     {
+        id: 5,
       img: {
         src: "https://tse2.mm.bing.net/th/id/OIP.WtiqDMPafmXPjZ3YZPOD0QHaLH?rs=1&pid=ImgDetMain",
         alt: "Colosseum"

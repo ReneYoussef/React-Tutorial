@@ -7,6 +7,7 @@ export default function App() {
   const DataElement = Data.map((entry) => {
     return (
       <Entry
+      key={entry.id}
         img={entry.img}
         title={entry.title}
         country={entry.country}
