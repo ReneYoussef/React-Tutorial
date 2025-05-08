@@ -4,9 +4,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #37383a;
   color: rgb(255, 255, 255);
+  width: 100%;
 }
 .header {
-  background-color: #285abe;
+  background-color: #0055ff;
   padding: 30px 30px;
   display: flex;
   justify-content: center;
@@ -30,17 +31,17 @@ body {
 }
 
 .journal-entry {
+  margin: 20px;
   display: flex;
   align-items: center;
-  padding: 40px;
-
+  padding: 30px;
   background-color: #fff;
   color: #000;
 }
 
 .main-img-container {
   height: 168px;
-  background-color: #285abe;
+  background-color: #0055ff;
   border-radius: 5px;
   margin: 0 20px 0 0;
 }
@@ -76,7 +77,7 @@ body {
 .entry-title {
   margin: 10px;
   font-weight: bold;
-  color: #285abe;
+  color: #0055ff;
 }
 
 .entry-date {
