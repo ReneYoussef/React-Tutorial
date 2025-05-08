@@ -7,14 +7,22 @@ export default function App() {
   const DataElement = Data.map((entry) => {
     return (
       <Entry
-      //key={index}
-        key={entry.id} //from api 
-        img={entry.img}
-        title={entry.title}
-        country={entry.country}
-        googleMapsUrl={entry.googleMapsUrl}
-        dates={entry.dates}
-        description={entry.description}
+
+      //if we have lots of properties we are passing to the component we cannot display them like this:
+      //************************//
+      // img={entry.img}
+      // title={entry.title}
+      // country={entry.country}
+      // googleMapsUrl={entry.googleMapsUrl}
+      // dates={entry.dates}
+      // description={entry.description}
+      //************************//
+      // we can use the spread operator to pass all the properties of the object to the component
+      // entry:{entry} //this will pass all the properties of the object to the component
+      key={entry.id} 
+      // entry={entry} 1st way: this will pass all the properties of the object to the component
+       {...entry} //2nd way: this will pass all the properties of the object to the component
+
       />
     );
   });
