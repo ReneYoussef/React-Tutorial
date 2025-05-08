@@ -1,16 +1,40 @@
-import jokesData from "./jokesData.js";
-import Joke from "./components/joke.jsx";
+
+import Data from "./data.js";
+import Entry from "./components/Entry.jsx";
+import Header from "./Components/Header.jsx";
+
 export default function App() {
-  const jokeElements = jokesData.map((joke) => {
-    //we will take the array of regular javascript object and turn them into an array of joke elements
-    return <Joke setup={joke.setup} punchline={joke.punchline} />;
+  const DataElement = Data.map((entry) => {
+    return (
+      <Entry
+        img={entry.img}
+        title={entry.title}
+        country={entry.country}
+        googleMapsUrl={entry.googleMapsUrl}
+        dates={entry.dates}
+        description={entry.description}
+      />
+    );
   });
   return (
     <>
-      <main>{jokeElements}</main>
+      <Header />
+      <main className="container">
+        {DataElement}
+        </main>
     </>
   );
 }
+
+// const jokeElements = jokesData.map((joke) => {
+//   //we will take the array of regular javascript object and turn them into an array of joke elements
+//   return <Joke setup={joke.setup} punchline={joke.punchline} />;
+// });
+// return (
+//   <>
+//     <main>{jokeElements}</main>
+//   </>
+// );
 
 // const persons = [
 //   <h2>Rene</h2>,
