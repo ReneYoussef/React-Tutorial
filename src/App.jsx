@@ -1,13 +1,14 @@
-
 import Data from "./data.js";
 import Entry from "./components/Entry.jsx";
 import Header from "./Components/Header.jsx";
 
 export default function App() {
+  // the callback function can provide index to the element if we need it
   const DataElement = Data.map((entry) => {
     return (
       <Entry
-      key={entry.id}
+      //key={index}
+        key={entry.id} //from api 
         img={entry.img}
         title={entry.title}
         country={entry.country}
@@ -20,9 +21,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="container">
-        {DataElement}
-        </main>
+      <main className="container">{DataElement}</main>
     </>
   );
 }
