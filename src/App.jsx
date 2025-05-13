@@ -1,49 +1,59 @@
 import Data from "./data.js";
 import Entry from "./components/Entry.jsx";
 import Header from "./Components/Header.jsx";
+import Joke from "./Components/joke.jsx";
+import jokesData from "./jokesData.js";
 
-export default function App() {
-  // the callback function can provide index to the element if we need it
-  const DataElement = Data.map((entry) => {
-    return (
-      <Entry
+export default function App1() {
+  // We take the array of regular JavaScript objects and turn them into an array of Joke elements
+  const jokeElements = jokesData.map((joke, index) => (
+    <Joke key={index} setup={joke.setup} punchline={joke.punchline} />
+  ));
 
-      //if we have lots of properties we are passing to the component we cannot display them like this:
-      //************************//
-      // img={entry.img}
-      // title={entry.title}
-      // country={entry.country}
-      // googleMapsUrl={entry.googleMapsUrl}
-      // dates={entry.dates}
-      // description={entry.description}
-      //************************//
-      // we can use the spread operator to pass all the properties of the object to the component
-      // entry:{entry} //this will pass all the properties of the object to the component
-      key={entry.id} 
-      // entry={entry} 1st way: this will pass all the properties of the object to the component
-       {...entry} //2nd way: this will pass all the properties of the object to the component
-
-      />
-    );
-  });
   return (
-    <>
-      <Header />
-      <main className="container">{DataElement}</main>
-    </>
+    <main>
+      {jokeElements}
+    </main>
   );
 }
 
-// const jokeElements = jokesData.map((joke) => {
-//   //we will take the array of regular javascript object and turn them into an array of joke elements
-//   return <Joke setup={joke.setup} punchline={joke.punchline} />;
-// });
-// return (
-//   <>
-//     <main>{jokeElements}</main>
-//   </>
-// );
 
+// export default function App() {
+//   // the callback function can provide index to the element if we need it
+//   const DataElement = Data.map((entry) => {
+//     return (
+//       <Entry
+
+//       //if we have lots of properties we are passing to the component we cannot display them like this:
+//       //************************//
+//       // img={entry.img}
+//       // title={entry.title}
+//       // country={entry.country}
+//       // googleMapsUrl={entry.googleMapsUrl}
+//       // dates={entry.dates}
+//       // description={entry.description}
+//       //************************//
+//       // we can use the spread operator to pass all the properties of the object to the component
+//       // entry:{entry} //this will pass all the properties of the object to the component
+//       key={entry.id} 
+//       // entry={entry} 1st way: this will pass all the properties of the object to the component
+//        {...entry} //2nd way: this will pass all the properties of the object to the component
+
+//       />
+//     );
+//   });
+//   return (
+//     <>
+//       <Header />
+//       <main className="container">{DataElement}</main>
+//     </>
+//   );
+// }
+
+
+
+
+////////////////////////////////////////////////////////////////////
 // const persons = [
 //   <h2>Rene</h2>,
 //   <h2>Elie</h2>,
