@@ -13,7 +13,7 @@ export default function Joke(props) {
   we show them if one is not available  we only 
 show the available ones */}
 
-      {props.setup && <p>setup: {props.setup}</p>}
+      {props.setup ? <p>setup: {props.setup}</p>: null}
       {isShown ? <p>punchline: {props.punchline}</p> : null}
 
       <button onClick={toggleShown}>{isShown ?"Hide" :"show"}</button>
