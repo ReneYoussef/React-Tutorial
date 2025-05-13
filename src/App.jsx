@@ -4,18 +4,7 @@ import Header from "./Components/Header.jsx";
 import Joke from "./Components/joke.jsx";
 import jokesData from "./jokesData.js";
 
-export default function App1() {
-  // We take the array of regular JavaScript objects and turn them into an array of Joke elements
-  const jokeElements = jokesData.map((joke, index) => (
-    <Joke key={index} setup={joke.setup} punchline={joke.punchline} />
-  ));
-
-  return (
-    <main>
-      {jokeElements}
-    </main>
-  );
-}
+// 
 
 
 // export default function App() {
@@ -51,7 +40,22 @@ export default function App1() {
 // }
 
 
+export default function App1() {
+  // We take the array of regular JavaScript objects and turn them into an array of Joke elements
+  const jokeElements = jokesData.map((joke, index) => (
+    <Joke
+     key={index}
+      setup={joke.setup}
+       punchline={joke.punchline}
+        />
+  ));
 
+  return (
+    <main>
+      {jokeElements}
+    </main>
+  );
+}
 
 ////////////////////////////////////////////////////////////////////
 // const persons = [

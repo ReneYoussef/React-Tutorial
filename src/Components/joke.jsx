@@ -1,13 +1,12 @@
 import React from "react";
 
 export default function Joke(props) {
- const [isShown, setIsShown] = React.useState(false);
-
+  const [isShown, setIsShown] = React.useState(false);
 
   function toggleShown() {
-    setIsShown( prevShown=> !prevShown);
+    setIsShown((prevShown) => !prevShown);
   }
- console.log(isShown)
+  console.log(isShown);
   return (
     <>
       {/* /* if we need to check if all fields are available
@@ -15,8 +14,9 @@ export default function Joke(props) {
 show the available ones */}
 
       {props.setup && <p>setup: {props.setup}</p>}
-      {isShown  && <p>punchline: {props.punchline}</p>}
-      <button onClick={toggleShown}>Show punchline</button>
+      {isShown && <p>punchline: {props.punchline}</p>}
+
+      <button onClick={toggleShown}>{isShown ?"Hide" :"show"}</button>
 
       <hr />
     </>
