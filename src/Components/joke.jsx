@@ -14,7 +14,7 @@ export default function Joke(props) {
 show the available ones */}
 
       {props.setup && <p>setup: {props.setup}</p>}
-      {isShown && <p>punchline: {props.punchline}</p>}
+      {isShown ? <p>punchline: {props.punchline}</p> : null}
 
       <button onClick={toggleShown}>{isShown ?"Hide" :"show"}</button>
 
